@@ -1,0 +1,59 @@
+.form {
+    padding: 40px;
+    min-height: 86.6vh;
+    background: #ddd;
+    &__title {
+        text-align: end;
+        color: red;
+        font-weight: bold;
+        font-size: 32px;
+    }
+
+    &__info {
+        margin: 30px auto;
+        padding: 50px;
+        width: 550px;
+        background: rgba(255, 255, 255, 0.263);
+        backdrop-filter: blur(3px);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        label {
+            font-size: 20px;
+            color: black;
+            font-weight: 800;
+        }
+
+        input {
+            border: 1px solid transparent;
+            border-bottom: 1px solid black;
+            font-size: 18px;
+            padding: 10px 20px;
+            outline: none;
+        }
+    }
+
+    &__btn {
+        padding: 10px 20px;
+        color: white;
+        background: green;
+        border: 1px solid green;
+        border-radius: 10px;
+        font-size: 18px;
+        transition: .4s;
+
+        &:hover {
+            color: green;
+            background: white;
+        }
+    }
+
+}
