@@ -30,7 +30,7 @@ const CreateUser = () => {
     <div className="form">
       <form className="form__info" onSubmit={handleCreate} action="">
         <div className="form__card">
-          <label htmlFor="fullName">User Name:</label>
+          <label htmlFor="fullName">Name:</label>
           <input
             id="fullName"
             value={newUser.name}
@@ -42,7 +42,7 @@ const CreateUser = () => {
           />
         </div>
         <div className="form__card">
-          <label htmlFor="surname">User surname:</label>
+          <label htmlFor="surname">Surname:</label>
           <input
             id="surname"
             value={newUser.surname}
@@ -54,7 +54,7 @@ const CreateUser = () => {
           />
         </div>
         <div className="form__card">
-          <label htmlFor="username">User username:</label>
+          <label htmlFor="username">Username:</label>
           <input
             id="username"
             value={newUser.username}

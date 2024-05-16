@@ -6,7 +6,7 @@ import axios from "../../api";
 
 const Products = ({ data, isAdmin, setReload, loading }) => {
   const handleDelete = (id) => {
-    if (confirm("O'chirishni xoxlaysizmi")) {
+    if (confirm("Are you Sure")) {
       axios
         .delete(`products/${id}`)
         .then((res) => {
@@ -22,27 +22,34 @@ const Products = ({ data, isAdmin, setReload, loading }) => {
       <div className="products__img">
         <img src={product.img} alt="" />
       </div>
-      <h3>{product.name}</h3>
-      <p>{product.cost}$</p>
-      <p>{product.category}</p>
-      {isAdmin ? (
-        <>
-          <button
-            onClick={() => handleDelete(product.id)}
-            className="btn__delete"
-          >
-            Delete
-          </button>
-        </>
-      ) : (
-        <></>
-      )}
+      <div className="products__info">
+        <h3>Name: {product.name}</h3>
+        <p>Cost: {product.cost}$</p>
+        <p>Category: {product.category}</p>
+        {isAdmin ? (
+          <>
+            <button
+              onClick={() => handleDelete(product.id)}
+              className="btn__delete"
+            >
+              Delete
+            </button>
+          </>
+        ) : (
+          <></>
+        )}
+      </div>
     </div>
   ));
   return (
-    <div>
-      <div className="products">{loading ? <Loading /> : productItem}</div>
-    </div>
+    <>
+      <div className="hero ">
+        <div className="container">
+          <h2>Products</h2>
+          <div className="products">{loading ? <Loading /> : productItem}</div>
+        </div>
+      </div>
+    </>
   );
 };
 

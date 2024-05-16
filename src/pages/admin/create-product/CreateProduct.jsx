@@ -23,7 +23,6 @@ const CreateProduct = () => {
       .post("/products", newProduct)
       .then((res) => {
         setNewProduct(initialState);
-        toast.success("Qo'shildi");
         console.log(res);
       })
       .catch((res) => console.log(res));
@@ -42,31 +41,31 @@ const CreateProduct = () => {
                 setNewProduct((prev) => ({ ...prev, name: e.target.value }))
               }
               type="text"
-              placeholder="Nomi"
+              placeholder="Name"
             />
           </div>
           <div className="form__card">
-            <label htmlFor="price">Product Narxi:</label>
+            <label htmlFor="price">Product Cost:</label>
             <input
-              id="price"
-              value={newProduct.price}
+              id="cost"
+              value={newProduct.cost}
               onChange={(e) =>
                 setNewProduct((prev) => ({ ...prev, price: +e.target.value }))
               }
               type="number"
-              placeholder="Narxi"
+              placeholder="Cost"
             />
           </div>
           <div className="form__card">
-            <label htmlFor="desc">Product Desc:</label>
+            <label htmlFor="desc">Product Category:</label>
             <input
-              id="desc"
-              value={newProduct.desc}
+              id="category"
+              value={newProduct.category}
               onChange={(e) =>
-                setNewProduct((prev) => ({ ...prev, desc: e.target.value }))
+                setNewProduct((prev) => ({ ...prev, category: e.target.value }))
               }
               type="text"
-              placeholder="Description"
+              placeholder="Category"
             />
           </div>
           <button className="form__btn">Create</button>

@@ -2,11 +2,19 @@
     padding: 40px 0;
     width: 100%;
     height: 100vh;
-
+    &__input{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        label{
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
     &__title {
         text-align: center;
         padding: 20px 0;
-        color: white;
+        color: #ddd;
         font-size: 45px;
     }
 
@@ -14,33 +22,37 @@
         border-radius: 10px;
         margin: 0 auto;
         width: 400px;
-        padding: 40px;
+
+        padding: 30px;
         backdrop-filter: blur(4px);
-        background: #0002;
+        background: #eee;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 40px;
 
         input {
             padding: 10px 20px;
             outline: none;
             border: 1px solid black;
             border-radius: 10px;
+            border: none;
+            font-size: 18px;
         }
     }
 
-    &__btns {
-        padding: 20px 0;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
+  
 
     button {
         padding: 10px 20px;
-        border: 1px solid blue;
+        border: 2px solid #ddd;
         border-radius: 5px;
-        background: blue;
+        background: #ddd;
         color: white;
+        transition: 0.4s;
+        font-size: 18px;
+        &:hover{
+            background: #acaaaa;
+            border: 2px solid #acaaaa;
+        }
     }
 }

@@ -39,7 +39,6 @@ const Users = ({ data, isAdmin, setReload, loading }) => {
   ));
   return (
     <div>
-      <h2>Users</h2>
       <div className="users products">{loading ? <Loading /> : userItem}</div>
     </div>
   );

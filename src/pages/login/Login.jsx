@@ -8,8 +8,8 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   let navigate = useNavigate();
-  const [username, setUsername] = useState("kminchelle");
-  const [password, setPassword] = useState("0lelplR");
+  const [username, setUsername] = useState("yraigatt3");
+  const [password, setPassword] = useState("sRQxjPfdS");
   const [loading, setLoading] = useState(false);
 
   const handleLogin = (e) => {
@@ -37,23 +37,28 @@ const Login = () => {
         <h2 className="login__title">Login</h2>
 
         <form onSubmit={handleLogin} action="" className="login__form">
-          <input
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            type="text"
-            name=""
-          />
-          <input
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            type="password"
-            name=""
-          />
-          <div className="login__btns">
-            <button disabled={loading}>
-              {loading ? "Loading..." : "Log in"}
-            </button>
+          <div className="login__input">
+            <label htmlFor="username">Username</label>
+            <input
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              type="text"
+              name=""
+            />
           </div>
+          <div className="login__input">
+            <label htmlFor="password">Password</label>
+
+            <input
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              type="password"
+              name=""
+            />
+          </div>
+          <button className="login__btn" disabled={loading}>
+            {loading ? "Loading..." : "Log in"}
+          </button>
         </form>
       </div>
     </div>

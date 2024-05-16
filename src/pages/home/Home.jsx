@@ -6,7 +6,7 @@ const Home = () => {
   let { data, loading, error } = useFetch("/products");
 
   return (
-    <div className="home container">
+    <div className="home ">
       {loading ? <Loading /> : <Products data={data} />}
     </div>
   );

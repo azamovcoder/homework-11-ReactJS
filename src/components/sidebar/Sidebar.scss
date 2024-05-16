@@ -59,7 +59,11 @@
 
         span {
             font-size: 18px;
-            color: red;
+            color: grey;
+            transition: 0.4s;
+            &:hover{
+                color: red;
+            }
         }
     }
 }

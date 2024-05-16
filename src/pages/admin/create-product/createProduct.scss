@@ -23,18 +23,19 @@
 
     &__card {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        align-items: center;
+        gap: 5px;
 
         label {
             font-size: 20px;
             color: black;
-            font-weight: 800;
+            font-weight: 600;
         }
 
         input {
-            border: 1px solid transparent;
-            border-bottom: 1px solid black;
+            border: none;
+            border-bottom: 1px solid #ddd;
             font-size: 18px;
             padding: 10px 20px;
             outline: none;
@@ -44,14 +45,14 @@
     &__btn {
         padding: 10px 20px;
         color: white;
-        background: green;
-        border: 1px solid green;
+        background: #ddd;
+        border: none;
         border-radius: 10px;
         font-size: 18px;
         transition: .4s;
 
         &:hover {
-            color: green;
+            color: #979797;
             background: white;
         }
     }
